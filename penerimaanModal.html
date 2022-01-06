@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Program penerimaan modal menggunakan LVQ</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="jquery.loadingModal.min.css">
+
+	
+</head>
+<body style="background-color: #ecf0f1">
+
+	<center>
+		<h3 class="judulApp"> Program Penerimaan Modal Menggunakan Metode LVQ</h3>
+	</center>
+	<br>
+	<div class="col-12">
+
+		<div id="acrdTable " >
+		  <div class="card">
+		    <div class="card-header bg-info text-white" id="headingOne" data-toggle="collapse" data-target="#acrdDatTable" aria-expanded="true" aria-controls="acrdDatTable">
+		          Normalisasi Data
+		    </div>
+
+		    <div id="acrdDatTable" class="collapse " aria-labelledby="headingOne" data-parent="#acrdTable">
+		      <div class="card-body ">
+		        <div class="col-12">
+		        	<div class="row">
+		        		<div class="col-6">
+		        			<center>
+		        				<h5>Sebelum Normalisasi</h5>
+		        			</center>
+		        			<table class="table table-striped " >
+					        	<thead class="bg-warning text-white">
+							    <tr>
+							      <th scope="col">Data Ke</th>
+							      <th scope="col">Lama Usaha</th>
+							      <th scope="col">Jumlah Pekerja</th>
+							      <th scope="col">Omzet</th>
+							      <th scope="col">Jumlah Aset</th>
+							      <th scope="col">Hasil Keputusan</th>
+							    </tr>
+							  </thead>
+							  <tbody class="tBodyUnormal">
+							  	
+							  </tbody>
+					        </table>
+		        		</div>
+		        		<div class="col-6">
+		        			<center>
+		        				<h5>Sesudah Normalisasi</h5>
+		        			</center>
+		        			<table class="table table-striped " >
+					        	<thead class="bg-success text-white">
+							    <tr>
+							      <th scope="col">Data Ke</th>
+							      <th scope="col">Lama Usaha</th>
+							      <th scope="col">Jumlah Pekerja</th>
+							      <th scope="col">Omzet</th>
+							      <th scope="col">Jumlah Aset</th>
+							      <th scope="col">Hasil Keputusan</th>
+							    </tr>
+							  </thead>
+							  <tbody class="tBodyNormal">
+							  	
+							  </tbody>
+					        </table>
+		        		</div>
+		        	</div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>  
+		</div>	
+			
+		
+		</div>
+<br>
+	<div class="col-12">
+	<div class="row">
+		<div class="col-6">
+			
+		<div id="accordion " >
+		  <div class="card">
+		    <div class="card-header bg-success text-white" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		          Iterasi LVQ
+
+		    </div>
+
+		    <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+		      <div class="card-body iterasi">
+		        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		      </div>
+		    </div>
+		  </div>  
+		</div>	
+		</div>
+
+		<div class="col-6">
+
+		<div id="acrd " >
+		  <div class="card">
+		    <div class="card-header bg-success text-white" id="headingOne" data-toggle="collapse" data-target="#acrdDat" aria-expanded="true" aria-controls="acrdDat">
+		          Learning Result
+		    </div>
+
+		    <div id="acrdDat" class="collapse " aria-labelledby="headingOne" data-parent="#acrd">
+		      <div class="card-body ">
+		        <div class="LearningOut"></div>
+		      </div>
+		    </div>
+		  </div>  
+		</div>	
+			
+		
+		</div>
+
+	</div>
+</div>
+<br>
+	<div class="col-12">
+	<div class="row">
+		<div class="col-6" id="acrd">
+		<div class="card ">
+		  <div class="card-header bg-primary text-white" id="headingOne" data-toggle="collapse" data-target="#acrdDatUji" aria-expanded="true" aria-controls="acrdDatUji">
+		    Form Data Uji Baru
+		  </div>
+		  <div id="acrdDatUji" class="collapse show" aria-labelledby="headingOne" data-parent="#acrd">
+		  <div class="card-body">
+		    <div class="form-group">
+			    <label for="nmUKM">Nama UKM</label>
+			    <input type="text" class="form-control" id="nmUKM" aria-describedby="nmUKM" placeholder="Masukan Nama UKM">
+			    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+			  </div>
+
+			  <div class="form-group">
+			    <label for="lmUsaha">Lama Usaha (dlm tahun)</label>
+			    <input type="number" class="form-control" id="lmUsaha" aria-describedby="lmUsaha" placeholder="Masukan Lama Usaha ">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="jmlPk">Jumlah Pekerja</label>
+			    <input type="number" class="form-control" id="jmlPk" aria-describedby="jmlPk" placeholder="Masukan Jumlah Pekerja ">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="omz">Omzet (dlm juta)</label>
+			    <input type="number" class="form-control" id="omz" aria-describedby="omz" placeholder="Masukan Omzet">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="jmlAset">Jumlah Aset</label>
+			    <input type="number" class="form-control" id="jmlAset" aria-describedby="jmlAset" placeholder="Masukan Jumlah Aset ">
+			  </div>
+			  
+		    <button class="btn btn-primary btnSub">Submit</button>
+		  </div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="col-6">
+
+		<div id="accordion2 ">
+		  <div class="card">
+		    <div class="card-header bg-primary text-white" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+		         Output Hasil Uji
+		           
+		    </div>
+
+		    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion2">
+		      <div class="card-body hasilUji">
+		        <table class="table table-striped tblHasil" id="tblHasil">
+		        	<thead class="thead-info">
+				    <tr>
+				      <th scope="col">Nama UKM</th>
+				      <th scope="col">Lama Usaha</th>
+				      <th scope="col">Jumlah Pekerja</th>
+				      <th scope="col">Omzet</th>
+				      <th scope="col">Jumlah Aset</th>
+				      <th scope="col">Hasil Keputusan</th>
+				    </tr>
+				  </thead>
+				  <tbody class="tBodyHsl">
+				  	<tr>
+				  		<td>Umk Pamurbaya</td>
+				  		<td>4</td>
+				  		<td>15</td>
+				  		<td>4</td>
+				  		<td>6</td>
+				  		<td class="hsl1"></td>
+				  	</tr>
+				  	<tr>
+				  		<td>Umk Bandeng</td>
+				  		<td>3</td>
+				  		<td>28</td>
+				  		<td>4</td>
+				  		<td>10</td>
+				  		<td class="hsl2"></td>
+				  	</tr>
+				  	<tr>
+				  		<td>Bukid Graffer</td>
+				  		<td>2</td>
+				  		<td>12</td>
+				  		<td>1</td>
+				  		<td>3</td>
+				  		<td class="hsl3"></td>
+				  	</tr>
+				  	<tr>
+				  		<td>Kum Mandiri Sablon</td>
+				  		<td>2</td>
+				  		<td>10</td>
+				  		<td>3</td>
+				  		<td>10</td>
+				  		<td class="hsl4"></td>
+				  	</tr>
+				  	<tr>
+				  		<td>Kum Cahaya Mandiri</td>
+				  		<td>6</td>
+				  		<td>24</td>
+				  		<td>4</td>
+				  		<td>9</td>
+				  		<td class="hsl5"></td>
+				  	</tr>
+				  </tbody>
+		        </table>
+		      </div>
+		    </div>
+		  </div>  
+		</div>	
+
+		
+
+		
+	</div>
+</div>
+	</div>
+
+	
+	
+
+</body>
+<script type="text/javascript" src="jq.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="jquery.loadingModal.min.js"></script>
+<script type="text/javascript">
+	var rowTable=5;
+	var a=0.05;
+	var maxEpoh =10;
+	var fKoma=4;
+	var minimum,maksimum;
+	// data ke 1,2,8 di jadikan sebagai Bobot
+	//data latih
+	
+	var x=[[4,16,1,10],[2,9,2,2],[1,9,5,4],[3,22,2,1],[4,14,2,3],[6,1,2,3],[7,13,5,10],[4,3,3,6],[0,15,3,6],[7,15,3,8],[2,26,1,8],[5,23,3,10],[3,18,5,7],[7,20,3,6],[3,2,2,9],[6,16,5,7],[0,24,3,1],[2,18,1,8],[0,5,2,5],[3,10,1,1],[3,25,4,6],[2,4,1,1],[7,30,1,3],[6,3,4,7],[5,19,5,2],[4,25,2,4],[3,3,2,4],[7,19,5,3],[1,24,5,7],[4,20,4,1],[2,12,4,4],[7,29,5,2],[5,3,1,2],[5,6,1,6],[4,23,5,6],[7,17,2,7],[1,21,2,8],[4,1,2,8],[7,10,5,4],[1,30,1,6],[5,8,5,3],[2,26,2,9]];
+	var norm=[[4,16,1,10],[2,9,2,2],[1,9,5,4],[3,22,2,1],[4,14,2,3],[6,1,2,3],[7,13,5,10],[4,3,3,6],[0,15,3,6],[7,15,3,8],[2,26,1,8],[5,23,3,10],[3,18,5,7],[7,20,3,6],[3,2,2,9],[6,16,5,7],[0,24,3,1],[2,18,1,8],[0,5,2,5],[3,10,1,1],[3,25,4,6],[2,4,1,1],[7,30,1,3],[6,3,4,7],[5,19,5,2],[4,25,2,4],[3,3,2,4],[7,19,5,3],[1,24,5,7],[4,20,4,1],[2,12,4,4],[7,29,5,2],[5,3,1,2],[5,6,1,6],[4,23,5,6],[7,17,2,7],[1,21,2,8],[4,1,2,8],[7,10,5,4],[1,30,1,6],[5,8,5,3],[2,26,2,9]];
+	var tx=["Tunda","Tunda","Tunda","Tunda","Tidak","Ya","Tidak","Ya","Tidak","Ya","Tidak","Tunda","Tunda","Ya","Tidak","Ya","Ya","Tidak","Tunda","Tunda","Tidak","Tidak","Ya","Tidak","Ya","Ya","Tunda","Tunda","Ya","Ya","Tidak","Ya","Ya","Tidak","Tidak","Tunda","Tidak","Ya","Tidak","Tunda","Tidak","Ya"];
+	var w=[[0.285714286,0.448275862,0.5,0,111111111],[0.857142857,0.206896552,1,0.333333333],[0.714285714,0,0.5,0.111111111]];
+	var tw=["Tunda","Tidak","Ya"]
+
+		$( document ).ready(function() {
+			$('body').loadingModal({
+				  position: 'auto',
+				  text: '',
+				  color: '#fff',
+				  opacity: '0.7',
+				  backgroundColor: 'rgb(0,0,0)',
+				  animation: 'cubeGrid',
+				  text: 'Training Ai.....'
+				});
+				$('.iterasi').empty();
+				
+		    	
+		    	Normalisasi();
+				console.log( x);
+		    	insertDataToTable();
+				
+				setTimeout(trainAI,2000)
+				    
+		});
+
+
+		function getMinMaxOf2DIndex (arr, idx) {
+		    
+		        minimum = Math.min.apply(null, arr.map(function (e) { return e[idx]}));
+		        maksimum= Math.max.apply(null, arr.map(function (e) { return e[idx]}));
+		    
+		} 
+
+		function Normalisasi() {
+			for (var i = 0; i < 4; i++) {
+				getMinMaxOf2DIndex(x,i);
+				for (var j = 0; j < x.length; j++) {
+					x[j][i] = (norm[j][i]-minimum)/(maksimum-minimum);
+				}
+			console.log(minimum+"(min) "+maksimum+"(maksimum)");
+			}
+			
+		}
+
+		function insertDataToTable() {
+			for (var i = 0; i < x.length; i++) {
+				
+			$(".tBodyNormal").append("<tr>"+"<td>"+(i+1)+"</td>"+"<td>"+round(x[i][0],fKoma)+"</td>"+"<td>"+round(x[i][1],fKoma)+"</td>"+"<td>"+round(x[i][2],fKoma)+"</td>"+"<td>"+round(x[i][3],fKoma)+"</td>"+"<td >"+tx[i]+"</td>"+"</tr>");
+			$(".tBodyUnormal").append("<tr>"+"<td>"+(i+1)+"</td>"+"<td>"+norm[i][0]+"</td>"+"<td>"+norm[i][1]+"</td>"+"<td>"+norm[i][2]+"</td>"+"<td>"+norm[i][3]+"</td>"+"<td >"+tx[i]+"</td>"+"</tr>");
+			}
+
+		}
+
+
+		
+</script>
+<script type="text/javascript" src="LVQ.min.js"></script>
+</html>
